@@ -1,0 +1,27 @@
+
+:root {
+  /* Primary Colors: */
+  --primary-color: #003253;
+  --secondary-color: #112333;
+  --accent-color: #1a5c88;
+
+/* Link Colors: */
+  --link-color: #4169e1;
+  --visited-color: #1a5c88;
+  --hover-color: #112333;
+
+/* Neutral Colors: */
+  --focused-color: #111111;
+  --main-text-color: #404040;
+  --form-input-color: #666666;
+  --border-color: #cccccc;
+  --background-color: #eeeeee;
+  --base-background-color: #ffffff;
+  --highlight-color: #fff9c0;
+
+  /* Additional Colors */
+  --light-gray: #EEF1F3;
+  --medium-gray: #DEE5E8;
+  --dark-gray: #5D5D5D;
+  --button-text: rgba(0, 0, 0, 0.8);
+}
