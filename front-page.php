@@ -15,14 +15,19 @@
 get_header();
 ?>
 <header class="entry-header">
-	<!-- <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
- -->
-
-	<h1 class="entry-title"
-		style="background-image: url('<?php esc_url(header_image()) ?>'); max-height:<?php echo get_custom_header()->height; ?>px">
-		Bienvenue à Saint-Martin</h1>
-
-
+	<h1 class="entry-title header-image">
+		Bienvenue à Saint-Martin
+		<img 
+			src="<?php echo esc_url(get_header_image()); ?>"
+			srcset="<?php echo esc_url(get_header_image()); ?> 1920w,
+					<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'large')[0]); ?> 1024w,
+					<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'medium')[0]); ?> 768w"
+			sizes="100vw"
+			alt=""
+			loading="lazy"
+			class="header-background"
+		>
+	</h1>
 </header>
 <div id="quicklinks" style="display:none">
 	<?php dynamic_sidebar('liens-1'); ?>
