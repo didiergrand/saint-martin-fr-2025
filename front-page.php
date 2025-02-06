@@ -17,16 +17,27 @@ get_header();
 <header class="entry-header">
 	<h1 class="entry-title header-image">
 		Bienvenue à Saint-Martin
-		<img 
-			src="<?php echo esc_url(get_header_image()); ?>"
-			srcset="<?php echo esc_url(get_header_image()); ?> 1920w,
-					<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'large')[0]); ?> 1024w,
-					<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'medium')[0]); ?> 768w"
-			sizes="100vw"
-			alt=""
-			loading="lazy"
-			class="header-background"
-		>
+		<picture>
+			<!-- Version mobile -->
+			<source
+				media="(max-width: 576px)"
+				srcset="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'mobile-header')[0]); ?>"
+				type="image/webp"
+			>
+			<!-- Version tablette -->
+			<source
+				media="(max-width: 768px)"
+				srcset="<?php echo esc_url(wp_get_attachment_image_src(get_custom_header()->attachment_id, 'tablet-header')[0]); ?>"
+				type="image/webp"
+			>
+			<!-- Version desktop (fallback) -->
+			<img 
+				src="<?php echo esc_url(get_header_image()); ?>"
+				alt=""
+				loading="lazy"
+				class="header-background"
+			>
+		</picture>
 	</h1>
 </header>
 <div id="quicklinks" style="display:none">
