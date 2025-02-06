@@ -215,8 +215,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-
+add_action('after_setup_theme', 'add_custom_image_sizes');
+function add_custom_image_sizes() {
+    add_image_size('mobile-header', 576, 300, true);      // Pour mobile standard
+    add_image_size('mobile-header-2x', 1152, 600, true);  // Pour mobile haute densité
+    add_image_size('tablet-header', 768, 400, true);      // Pour tablette standard
+    add_image_size('tablet-header-2x', 1536, 800, true);  // Pour tablette haute densité
+}
 
 // function theme_customize_register( $wp_customize ) {
 //     $wp_customize->add_section( 'header_images', array(
