@@ -45,37 +45,6 @@ get_header();
 </div>
 <main id="primary" class="site-main">
 	<div id="latest-news" class="container-l">
-		<div class="actualites">
-			<h2>Actualités</h2>
-			<div class="actualites-content">
-				<?php
-				$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'category_name' => 'actualites',
-					'posts_per_page' => 20,
-				); ?>
-				<?php $arr_posts = new WP_Query($args); ?>
-				<?php if ($arr_posts->have_posts()): ?>
-					<?php while ($arr_posts->have_posts()):
-						$arr_posts->the_post(); ?>
-						<?php if (is_sticky()): ?>
-							<!-- Code pour afficher l'article épinglé ici -->
-							<?php get_template_part('template-parts/content', 'home'); ?>
-						<?php endif; ?>
-					<?php endwhile; ?>
-					<?php rewind_posts(); // réinitialiser la liste des articles ?>
-					<?php while ($arr_posts->have_posts()):
-						$arr_posts->the_post(); ?>
-						<?php if (!is_sticky()): ?>
-							<!-- Code pour afficher les autres articles ici -->
-							<?php get_template_part('template-parts/content', 'home'); ?>
-						<?php endif; ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); // réinitialiser les données de la requête ?>
-				<?php endif; ?>
-			</div>
-		</div>
 		<div class="pilier-public">
 
 			<h2>Pilier public</h2>
@@ -137,6 +106,37 @@ get_header();
 					<?php wp_reset_postdata(); // réinitialiser les données de la requête ?>
 				</div>
 			<?php endif; ?>
+		</div>
+		<div class="actualites">
+			<h2>Actualités</h2>
+			<div class="actualites-content">
+				<?php
+				$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'category_name' => 'actualites',
+					'posts_per_page' => 20,
+				); ?>
+				<?php $arr_posts = new WP_Query($args); ?>
+				<?php if ($arr_posts->have_posts()): ?>
+					<?php while ($arr_posts->have_posts()):
+						$arr_posts->the_post(); ?>
+						<?php if (is_sticky()): ?>
+							<!-- Code pour afficher l'article épinglé ici -->
+							<?php get_template_part('template-parts/content', 'home'); ?>
+						<?php endif; ?>
+					<?php endwhile; ?>
+					<?php rewind_posts(); // réinitialiser la liste des articles ?>
+					<?php while ($arr_posts->have_posts()):
+						$arr_posts->the_post(); ?>
+						<?php if (!is_sticky()): ?>
+							<!-- Code pour afficher les autres articles ici -->
+							<?php get_template_part('template-parts/content', 'home'); ?>
+						<?php endif; ?>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); // réinitialiser les données de la requête ?>
+				<?php endif; ?>
+			</div>
 		</div>
 		<div class="infos-diverses">
 			<div id="st-martin-fr-sidebar" class="st-martin-fr-sidebar">
