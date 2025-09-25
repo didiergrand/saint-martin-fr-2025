@@ -80,7 +80,7 @@
 				)
 			);
 			?>
-			<div class="search-container">
+			<div class="search-container" style="display: none;">
 				<div class="search-box">
 					<?php get_search_form(); ?>
 				</div>
