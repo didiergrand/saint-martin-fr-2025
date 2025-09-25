@@ -173,3 +173,27 @@ document.body.addEventListener("click", (event) => {
     });
   }
 });
+
+
+// Search toggle functionality
+const searchToggle = document.querySelector('.search-toggle');
+const searchBox = document.querySelector('.search-box');
+const siteNav = document.querySelector('#site-navigation');
+
+if (searchToggle && searchBox) {
+  searchToggle.addEventListener('click', () => {
+    searchBox.classList.toggle('active');
+    siteNav.classList.toggle('search-active');
+    searchToggle.classList.toggle('active');
+  }); 
+
+  // Close search box when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.search-container')) {
+      searchBox.classList.remove('active');
+      siteNav.classList.remove('search-active');
+      searchToggle.classList.remove('active');
+    }
+  });
+}
+  
