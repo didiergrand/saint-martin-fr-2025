@@ -14,14 +14,13 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
+			<header class="entry-header">
+				<h1 class="entry-title" style="background-image: url('https://www.saint-martin-fr.ch/wp-content/uploads/2023/05/cropped-20230505_154709-scaled-3.jpg')"><span>	
+				<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'saint-martin-fr' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+					printf( esc_html__( 'Résultats de la recherche pour: %s', 'saint-martin-fr' ), '<span>' . get_search_query() . '</span>' );
+				?></span></h1>	
+			</header>
 
 			<?php
 			/* Start the Loop */
