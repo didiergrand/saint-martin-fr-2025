@@ -1267,9 +1267,9 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
 .search-active #primary-menu {
   display: none;
 }
-@media screen and (min-width: 860px) and (max-width: 1199px) {
+@media screen and (max-width: 860px) {
   .search-toggle {
-    top: 60px;
+    top: 10px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1397,7 +1397,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
   .search-toggle{
     position: absolute;
     right: 50px;
-    top: 10px;
+    top: 60px;
   }
   .search-active{
     .search-toggle{
