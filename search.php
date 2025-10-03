@@ -21,7 +21,7 @@ get_header();
 					printf( esc_html__( 'Résultats de la recherche pour: %s', 'saint-martin-fr' ), '<span>' . get_search_query() . '</span>' );
 				?></span></h1>	
 			</header>
-
+			<div class="container">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -44,7 +44,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
 	</main><!-- #main -->
 
 <?php
