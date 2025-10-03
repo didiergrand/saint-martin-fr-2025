@@ -1219,10 +1219,14 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  color: var(--gray);
+  color: #5D5D5D;
   display: flex;
   justify-content: center;
   align-items: center;
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .search-toggle:hover {
