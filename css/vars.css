@@ -24,4 +24,6 @@
   --medium-gray: #DEE5E8;
   --dark-gray: #5D5D5D;
   --button-text: rgba(0, 0, 0, 0.8);
+
+  --border-radius-large: 3px;
 }

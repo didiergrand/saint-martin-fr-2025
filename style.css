@@ -1189,13 +1189,29 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
 #primary-menu .focus > .sub-menu {
   top: 90px;
 }
+.search-submit {
+  border: none !important;
+  border-radius: var(--border-radius-large) !important;
+  background: var(--primary-color) !important;
+  color: #fff !important;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em; }
+.search-submit:hover{
+  background: var(--link-color) !important;
+  cursor: pointer;
+}
+.search-submit:active, .search-submit:focus {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+}
 
 .search-container {
-  position: relative;
   margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--light-gray);
+  z-index: 1000;
 }
 
 .search-toggle {
@@ -1203,14 +1219,14 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  color: var(--color-gray);
+  color: var(--gray);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search-toggle:hover {
-  color: var(--color-red);
+  color: var(--link-color);
 }
 .search-toggle .close-icon {
   display: none;
@@ -1241,7 +1257,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
 
 .search-box input[type="search"] {
   padding: 8px;
-  border: 1px solid var(--color-medium-gray);
+  border: 1px solid var(--medium-gray);
   border-radius: var(--border-radius-large);
   min-width: 400px;
 }
@@ -1373,24 +1389,26 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
   .search-toggle{
     position: absolute;
     right: 50px;
+    top: 10px;
   }
   .search-active{
     .search-toggle{
       right: 10px;
     }
     .search-container {
-      background: #fff;
       position: absolute;
       justify-content: left;
       top: 70px;
-      padding: 20px;
+      padding: 10px 15px;
       margin: 0;
       right: 0;
       left: 0;
+      background: var(--primary-color);
+      color: #fff;
     }
     .search-box input[type="search"] {
       padding: 8px;
-      border: 1px solid var(--color-medium-gray);
+      border: 1px solid var(--medium-gray);
       border-radius: var(--border-radius-large);
       min-width: calc(100vw - 220px);
     }
