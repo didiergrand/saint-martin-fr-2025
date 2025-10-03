@@ -1192,7 +1192,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
 .search-submit {
   border: none !important;
   border-radius: var(--border-radius-large) !important;
-  background: var(--primary-color) !important;
+  background: var(--accent-color) !important;
   color: #fff !important;
   line-height: 1;
   padding: 0.6em 1em 0.4em; }
@@ -1397,7 +1397,9 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
   }
   .search-active{
     .search-toggle{
-      right: 10px;
+      right: 5px;
+      top: 5px;
+      color: #fff;
     }
     .search-container {
       position: absolute;
@@ -1409,6 +1411,9 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
       left: 0;
       background: var(--primary-color);
       color: #fff;
+      width: 96%;
+      margin: 0 auto;
+      border-radius: 4px;
     }
     .search-box input[type="search"] {
       padding: 8px;
