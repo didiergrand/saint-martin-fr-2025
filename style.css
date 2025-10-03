@@ -1422,7 +1422,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin {
     }
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 819px) {
   .search-toggle {
     top: 10px;
   }
